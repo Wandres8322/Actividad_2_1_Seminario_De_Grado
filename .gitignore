@@ -1,0 +1,18 @@
+# Entorno local
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Seguimiento y artefactos locales de MLflow
+mlflow.db
+mlruns/
+
+# Resultados de ejecución
+logs/*.log
+models/*
+!models/.gitkeep
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

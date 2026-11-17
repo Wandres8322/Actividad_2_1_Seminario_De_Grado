@@ -1,0 +1,57 @@
+{
+  "contract_name": "iris_inference_input",
+  "contract_version": "1.0.0",
+  "description": "Contrato de entrada para una predicción individual del clasificador Iris.",
+  "input_format": "JSON object",
+  "required_features": [
+    {
+      "name": "sepal length (cm)",
+      "type": "number",
+      "minimum": 4.3,
+      "maximum": 7.9,
+      "unit": "cm",
+      "nullable": false
+    },
+    {
+      "name": "sepal width (cm)",
+      "type": "number",
+      "minimum": 2.0,
+      "maximum": 4.4,
+      "unit": "cm",
+      "nullable": false
+    },
+    {
+      "name": "petal length (cm)",
+      "type": "number",
+      "minimum": 1.0,
+      "maximum": 6.9,
+      "unit": "cm",
+      "nullable": false
+    },
+    {
+      "name": "petal width (cm)",
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 2.5,
+      "unit": "cm",
+      "nullable": false
+    }
+  ],
+  "additional_properties": false,
+  "valid_example": {
+    "sepal length (cm)": 5.1,
+    "sepal width (cm)": 3.5,
+    "petal length (cm)": 1.4,
+    "petal width (cm)": 0.2
+  },
+  "invalid_example": {
+    "sepal length (cm)": "cinco",
+    "sepal width (cm)": 3.5,
+    "petal length (cm)": 1.4,
+    "petal width (cm)": -0.2
+  },
+  "invalid_example_expected_errors": [
+    "sepal length (cm) debe ser numérico",
+    "petal width (cm) está fuera del rango permitido"
+  ]
+}
